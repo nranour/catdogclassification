@@ -2,6 +2,7 @@ import streamlit as st
 import tensorflow as tf
 import numpy as np
 from PIL import Image
+import gdown
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
@@ -27,8 +28,17 @@ image_uploaded = st.sidebar.file_uploader("Upload your picture :", type=["jpg", 
 st.markdown("<h1 style='text-align: center;'>Cat or Dog ?</h1>", unsafe_allow_html=True)
 st.write("---------------")
 
+# Define the Google Drive file ID
+FILE_ID = "1RV-1YsW0oYHlmC4he9xKNSeBi6KxC8K9"  
+OUTPUT_PATH = "Cat_or_Dog_Model.keras"  # Change this based on your model type
+
+# Download the model if it doesn't already exist
+if not os.path.exists(OUTPUT_PATH):
+    url = f"https://drive.google.com/uc?id={FILE_ID}"
+    gdown.download(url, OUTPUT_PATH, quiet=False)
+  
 # Charger le modèle de classification sauvegardé
-model = load_model('https://drive.google.com/drive/u/0/my-drive/Cat_or_Dog_Model.keras')
+model = load_model(OUTPUT_PATH)
 
 # Créer un ImageDataGenerator pour la normalisation des pixels 
 image_gen = ImageDataGenerator( rescale=1/255 )  
