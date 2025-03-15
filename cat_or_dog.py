@@ -18,7 +18,7 @@ st.markdown(
               unsafe_allow_html=True
             )
 st.sidebar.markdown("<h1 style='text-align: center;'>MSDE6 : Deep Learning Project</h1>", unsafe_allow_html=True)
-st.sidebar.image("images/Cat vs Dog.jpg")
+st.sidebar.image("images/Cat_vs_Dog.jpg")
 st.sidebar.write("---------------")
 
 # Charger l'image à partir de la barre latérale
