@@ -28,7 +28,7 @@ st.markdown("<h1 style='text-align: center;'>Cat or Dog ?</h1>", unsafe_allow_ht
 st.write("---------------")
 
 # Charger le modèle de classification sauvegardé
-model = load_model('Cat_or_Dog_Model.keras')
+model = load_model('https://drive.google.com/drive/u/0/my-drive/Cat_or_Dog_Model.keras')
 
 # Créer un ImageDataGenerator pour la normalisation des pixels 
 image_gen = ImageDataGenerator( rescale=1/255 )  
