@@ -30,7 +30,7 @@ st.markdown("<h1 style='text-align: center;'>Cat or Dog ?</h1>", unsafe_allow_ht
 st.write("---------------")
 
 # Define the Google Drive file ID
-FILE_ID = "1RV-1YsW0oYHlmC4he9xKNSeBi6KxC8K9"  
+FILE_ID = "1KJ8XqaBDApSmkDyK6vS56cW6Ku_NtCsm"  
 OUTPUT_PATH = "Cat_or_Dog_Model.keras"  # Change this based on your model type
 
 # Download the model if it doesn't already exist
